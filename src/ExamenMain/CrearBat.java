@@ -8,23 +8,37 @@ import java.net.URISyntaxException;
 
 public class CrearBat {
     public static void crearArchivoBat() {
-        String nombreJar = getNombreJar();
-        String contenidoBat = "java -jar \"" + nombreJar + "\" --desde-bat";
+        String var0 = getNombreJar();
+        String var1 = "java -jar \"" + var0 + "\" --desde-bat";
 
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter("ejecutar.bat"))) {
-            escritor.write(contenidoBat);
-            System.out.println("Archivo .bat creado exitosamente.");
-        } catch (IOException e) {
-            e.printStackTrace();
+        try {
+            BufferedWriter var2 = new BufferedWriter(new FileWriter("ejecutar.bat"));
+
+            try {
+                var2.write(var1);
+                System.out.println("Archivo .bat creado exitosamente.");
+            } catch (Throwable var6) {
+                try {
+                    var2.close();
+                } catch (Throwable var5) {
+                    var6.addSuppressed(var5);
+                }
+
+                throw var6;
+            }
+
+            var2.close();
+        } catch (IOException var7) {
+            var7.printStackTrace();
         }
     }
 
     private static String getNombreJar() {
         try {
-            return new File(CrearBat.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getName();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-            return "archivo.jar"; // Valor por defecto en caso de error
+            return (new File(CrearBat.class.getProtectionDomain().getCodeSource().getLocation().toURI())).getName();
+        } catch (URISyntaxException var1) {
+            var1.printStackTrace();
+            return "archivo.jar";
         }
     }
 }
