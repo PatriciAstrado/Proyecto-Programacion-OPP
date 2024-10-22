@@ -5,32 +5,7 @@ import java.util.Scanner;
 
 public class ExamenMain {
     public static void main(String[] args) throws IOException {
-       /* boolean desdeBat = false;
-        for (String arg : args) {
-            if (arg.equals("--desde-bat")) {
-                desdeBat = true;
-                break;
-            }
-        }
-
-        if (!desdeBat) {
-            // Llamar al método para crear el archivo .bat
-            CrearBat.crearArchivoBat();
-
-            // Ejecutar el archivo .bat automáticamente después de crearlo
-            try {
-                ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "start", "ejecutar.bat");
-                pb.start();
-                System.out.println("Archivo .bat ejecutado exitosamente.");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // Terminar la ejecución de la aplicación actual para evitar el bucle
-            System.exit(0);
-        }*/
-
-        // Si el programa se ejecuta desde el .bat, continuar con la ejecución normal
+               // Si el programa se ejecuta desde el .bat, continuar con la ejecución normal
         Scanner scanner = new Scanner(System.in);
         
 
