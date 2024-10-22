@@ -1,0 +1,21 @@
+1|TF|La tierra es plana? |1
+r|false
+2|TF|Java es un lenguaje de programación orientado a objetos?|1
+r|true
+3|TF|El sol gira alrededor de la tierra?|1
+r|false
+4|SM|Cuál es el planeta más cercano al sol?|2
+o|Mercurio|Venus|Tierra|Marte
+r|a
+5|SM|Cuál de estos lenguajes no es interpretado?|2
+o|C++|Java|Python|Ruby
+r|a
+5|SM|Cuántos continentes hay en la tierra?|2
+o|4|5|6|7
+r|c
+6|RC|Cuál es el lenguaje de programación utilizado principalmente para Android?|2
+r|java
+7|RC|Qué gas es necesario para la respiración humana?|2
+r|oxigeno
+8|RC|Cuál es la capital de la Región de la RM?|2
+r|Santiago

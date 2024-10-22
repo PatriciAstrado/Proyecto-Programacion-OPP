@@ -1,0 +1,7 @@
+1|TF|Java actua aveces de manera rara?|3
+r|true
+2|RC|como se llama la especie que es considerada el mejor amigo del hombre?|4
+r|Perro
+3|SM|Que nota nos sacaremos?|3
+o|4|5|6|7
+r|d
